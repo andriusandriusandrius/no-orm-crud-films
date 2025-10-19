@@ -4,5 +4,5 @@ CREATE TABLE IF NOT EXISTS films(
     personal_review TEXT,
     rating INT,
     CHECK (rating BETWEEN 1 AND 10),
-    folder_d UUID references folders(id)
+    folder_d UUID NOT NULL references folders(id)
 );
