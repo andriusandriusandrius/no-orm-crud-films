@@ -11,7 +11,7 @@ namespace backend.Database
         public MigrationRunner(DbConnectionFactory factory, string migrationsFolder = "Database/Migrations")
         {
             _factory = factory;
-            _migrationsFolder = Path.Combine(AppContext.BaseDirectory,migrationsFolder);
+            _migrationsFolder = migrationsFolder;
         }
         public async Task ApplyMigrationsAsync()
         {
